@@ -18,7 +18,7 @@ function Chat({ users, messages, userName, roomId, onAddMessage }: any) {
 
   // Как только у нас добавляется новое сообщение, должен происходить скрол вниз списка сообщений
   React.useEffect(() => {
-    messagesRef.current.scrollTo(0, 99999);
+    messagesRef.current.scrollTo(0, messagesRef.current.scrollHeight);
   }, [messages]);
 
   return (
